@@ -1,0 +1,7 @@
+target/
+Servers/
+RemoteSystemsTempFiles/
+.idea/
+.metadata/
+.sonarlint/
+hsweb.iml
