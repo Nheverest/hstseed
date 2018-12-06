@@ -3,3 +3,5 @@
 logging:
   level: INFO
 
+properties:
+  user: World
