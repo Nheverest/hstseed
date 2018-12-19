@@ -19,17 +19,16 @@ public class HelloResourceIT {
     @Logging
     private Logger log;
 
-    @Configuration("web.runtime.baseUrl")
+    @Configuration("runtime.rest.baseUrl")
     private String baseUrl;
 
     @Test
     public void testHelloWorld() throws Exception {
-        baseUrl += "rest/";
         log.info("baseUrl: {}", baseUrl);
         Response response = given()
                 .auth().basic("demo", "demo")
                 .expect().statusCode(200)
-                .when().get(baseUrl + "hello");
+                .when().get(baseUrl + "/hello");
 
         assertThat(response.body().asString()).isEqualTo("Hello World!");
     }
