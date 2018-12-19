@@ -35,9 +35,11 @@ public class SayHiJspController {
 
     @GET
     @Path("/jsp")
+    @Produces(MediaType.TEXT_HTML)
     public Viewable sayHiJsp() {
-        log.info("About to return a Viewable object");
-        Viewable view = new Viewable("/jsp/hello",this);
+        String jspPath = "/hello";
+        log.info("About to return a Viewable object for {}", jspPath);
+        Viewable view = new Viewable(jspPath);
         return view;
     }
 }

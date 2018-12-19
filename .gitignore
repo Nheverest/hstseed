@@ -5,3 +5,7 @@ RemoteSystemsTempFiles/
 .metadata/
 .sonarlint/
 hsweb.iml
+.classpath
+.factorypath
+.project
+.settings/

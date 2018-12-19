@@ -11,8 +11,7 @@ import javax.ws.rs.core.HttpHeaders;
 import java.io.IOException;
 
 @WebFilter("/*")
-@Priority(1)
-public class EncodingFilter implements Filter {
+public class EncodingAndCacheFilter implements Filter {
 
     @Logging
     private Logger log;
@@ -22,6 +21,8 @@ public class EncodingFilter implements Filter {
         HttpServletResponse resp = (HttpServletResponse) response;
         log.info("Adding content-type header");
         resp.addHeader(HttpHeaders.CONTENT_TYPE, "text/html; charset=utf-8");
+
+        log.info("Adding cache configuration headers");
         // Set expiration
         resp.setDateHeader(HttpHeaders.EXPIRES, 0);
 
