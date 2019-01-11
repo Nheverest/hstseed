@@ -39,6 +39,10 @@ rest:
 web:
   server:
     port: 8081
+    welcomeFiles:
+      - test.html
+      - index.html
+      - hello.html
 
 properties:
   user: Hervé

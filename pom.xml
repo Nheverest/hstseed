@@ -87,6 +87,11 @@
                 <artifactId>seed-rest-jersey2</artifactId>
                 <version>3.8.1-SNAPSHOT</version>
             </dependency>
+            <dependency>
+                <groupId>org.seedstack.seed</groupId>
+                <artifactId>seed-web-core</artifactId>
+                <version>3.8.1-SNAPSHOT</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
