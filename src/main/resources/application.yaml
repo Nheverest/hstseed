@@ -2,7 +2,7 @@
 # See http://seedstack.org/docs/seed/configuration for more information
 
 logging:
-  level: DEBUG
+  level: INFO
 
 application:
   # Unique identifier of the application accross your organization
@@ -46,3 +46,17 @@ web:
 
 properties:
   user: Hervé
+
+mongoDb:
+  clients:
+    hsweb:
+      databases: hsweb
+      uri: mongodb://localhost/hsweb
+
+classes:
+  com:
+    hst:
+      hsweb:
+        mongoDbClient: hsweb
+        mongoDbDatabase: hsweb
+        com.mitchellbosecke.pebble.template.EvaluationContext@64518270: com.mitchellbosecke.pebble.template.PebbleTemplateImpl@3b7c58e7

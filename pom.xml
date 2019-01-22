@@ -82,6 +82,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+<!--
             <dependency>
                 <groupId>org.seedstack.seed</groupId>
                 <artifactId>seed-rest-jersey2</artifactId>
@@ -92,6 +93,7 @@
                 <artifactId>seed-web-core</artifactId>
                 <version>3.8.1-SNAPSHOT</version>
             </dependency>
+-->
         </dependencies>
     </dependencyManagement>
 
@@ -161,6 +163,20 @@
             <groupId>org.glassfish.jersey.ext</groupId>
             <artifactId>jersey-mvc-freemarker</artifactId>
             <version>2.27</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seedstack.addons.mongodb</groupId>
+            <artifactId>mongodb-morphia</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.4</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.seedstack.addons.swagger</groupId>
+            <artifactId>swagger</artifactId>
         </dependency>
     </dependencies>
 </project>

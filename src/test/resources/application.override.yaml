@@ -5,3 +5,18 @@ logging:
 
 properties:
   user: World
+
+mongoDb:
+  clients:
+    hsweb:
+      databases:
+        # In test mode, we substitute the hsweb database with hsweb-test aliased to the original name
+        # By doing this, we separate test data while retaining the original name when referenced from code
+        -hsweb:
+        hsweb-test:
+          alias: hsweb
+      uri: mongodb://localhost/hsweb-test
+
+business:
+  data:
+    forceImport: true
