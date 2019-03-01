@@ -1,7 +1,72 @@
+<!DOCTYPE html>
 <html>
 <head>
+    <META http-equiv="Cache-Control" content="no-cache">
+    <META http-equiv="Cache-Control" content="no-store">
+    <META http-equiv="Pragma" content="no-cache">
+    <META http-equiv="Pragma" content="no-store">
+
+    <script type="text/javascript">
+var files;
+reader = new FileReader();
+reader.onload = function(e) {
+	var target = document.getElementById("content");
+	target.textContent = e.target.result;
+};
+
+
+function logFileInfo() {
+	files = document.getElementById("fileselector").files;
+	if ( ! files || files.length === 0 ) {
+		console.log("No file selected");
+		return false;
+	}
+	for (var i = 0; i<files.length;  i++) {
+		console.log("File " + files[i].name);
+		console.log("     size " + files[i].size);
+		console.log("     type " + files[i].type);
+		//console.log("     path " + files[i].path);
+	};
+}
+
+function readContent() {
+	if ( ! files || files.length === 0 ) {
+		console.log("No file selected");
+		return false;
+	}
+	reader.readAsText(files[0]);
+}
+
+function allowDrop(evt) {
+	evt.preventDefault();
+}
+function addFiles(evt) {
+	evt.preventDefault();
+	if ( evt.dataTransfer.files ) {
+		reader.readAsText(evt.dataTransfer.files[0]);
+	}
+}
+
+</script>
 </head>
+
 <body>
-This is index.html page!
+<form name="formName">
+    <input type="file" id="fileselector" />
+    <br/><br/>
+    <input type="button" value="click to log file info" onclick="logFileInfo()" />
+    <input type="button" value="read content" onclick="readContent()" />
+</form>
+
+<br/>
+<div ondrop="addFiles(event)" ondragover="allowDrop(event)">
+    Or just drag your file here:
+    <img src="images/New24.gif" style="vertical-align:middle" />
+</div>
+
+<h4>
+    File content:
+</h4>
+<textarea id="content" rows="15" cols="80"></textarea>
 </body>
 </html>
