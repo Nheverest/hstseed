@@ -10,12 +10,16 @@ import org.seedstack.business.domain.BaseAggregateRoot;
 
 import javax.validation.constraints.NotNull;
 
-@Getter
 @Entity
 public class Client extends BaseAggregateRoot<ClientId> implements AggregateRoot<ClientId> {
     @Id
     @NotNull
     private ClientId id;
+
+    public String getCode() {
+        return code;
+    }
+
     @Indexed(options = @IndexOptions(unique = true))
     private String code;
 

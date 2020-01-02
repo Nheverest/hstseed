@@ -1,8 +1,8 @@
 package com.hst.hsweb.domain.model.client;
 
-import org.hibernate.validator.constraints.NotBlank;
 import org.mongodb.morphia.annotations.Embedded;
 import org.seedstack.business.domain.BaseValueObject;
+import org.seedstack.seed.validation.NotBlank;
 
 @Embedded
 public class ClientId extends BaseValueObject {
