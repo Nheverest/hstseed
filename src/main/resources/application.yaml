@@ -18,13 +18,6 @@ security:
   users:
     # A default 'demo' user is defined with password 'demo'
     demo: demo
-  web:
-    # The 'urls' section below in used to secure HTTP requests
-    # See http://seedstack.org/docs/seed/manual/security/#http-access-control for more information
-    urls:
-    #   -
-    #     pattern: /api/**
-    #     filters: authcBasic
 
 rest:
   path: /rest
@@ -60,3 +53,4 @@ classes:
         mongoDbClient: hsweb
         mongoDbDatabase: hsweb
         com.mitchellbosecke.pebble.template.EvaluationContext@64518270: com.mitchellbosecke.pebble.template.PebbleTemplateImpl@3b7c58e7
+
