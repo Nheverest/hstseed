@@ -1,7 +1,9 @@
-# Versioning and Release
+# Versioning and Release overview
 
-Seedstack version is declared in pom.xml file of distribution project. 
-Releasing a new versions starts with update of version in this project: 
+Seedstack version is declared in pom.xml file of `distribution` module. 
+This project is used as a bom. 
+
+Releasing a new version starts with updating the version in this project: 
 
 	mvn versions:set versions:commit -DnewVersion=19.11-SNAPSHOT
 	
@@ -13,23 +15,43 @@ Where month can be:
 - 7 (July) 
 - 11 (November)
 
-Release process itself is triggered by a commit after "-SNAPSHOT" removal from version. 
-In other words, the tag associated with version x.y.z includes pom.xml files with x.y.z-SNAPSHOT versions.
+Release build process itself is triggered by a commit where "-SNAPSHOT" has been removed from version number. 
+
+Note: the tag associated with version x.y.z includes pom.xml files with x.y.z-SNAPSHOT versions.
 (The tag is not on a x.y.z version.)
 
 # Release Process
 
-Identify components to release, so as to update their version in distribution's pom.xml
+The first step is to identify components to be released, so as to update their version in distribution's pom.xml. 
+
+Each component is then released invidually, ending with distribution project
+
+This list can be established based on:
+1. bintray
+1. github
 
 ## bintray
 
-###  Overview
+[bintray](https://bintray.com/seedstack) site is a deposit for Seedstack released deliverables, before they are transfered to Maven Central. 
 
-bintray site is a deposit for Seedstack released deliverables, before they are transfered to Maven Central (Maven Central is owned by sonatype, publishing requires specific credentials). 
+The "Latest Activity" lists all released components, especially those released after latest "distribution". 
 
-The "Latest Activity" lists all released componnents, especially those released after latest "distribution". 
+## Github
+[Github](https://github.com/seedstack) is the repository for Seedstack source files.
 
-###  Release 19.11
+Projects updated since latest release appear before _distribution_ project. 
+
+
+## Others
+
+### travis-ci
+[travis-ci](https://travis-ci.org) is the tool used for continuous integration. Configuration for each project is defined in .travis.yml file, at the root of the project.
+
+### Maven Central
+
+It is owned by sonatype, and publishing artifacts requires specific credentials.
+
+# Exemple with Release 19.11
 
 No component has been released since version 19.7. 
 

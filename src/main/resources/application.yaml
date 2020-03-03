@@ -54,3 +54,5 @@ classes:
         mongoDbDatabase: hsweb
         com.mitchellbosecke.pebble.template.EvaluationContext@64518270: com.mitchellbosecke.pebble.template.PebbleTemplateImpl@3b7c58e7
 
+someConfig:
+  myArray: ["herve", "stern"]
