@@ -151,5 +151,3 @@ Use seedstack 3.9.1
 Use seedstack 3.9.1
 Name proposal: Tulip
 
-#### clp-addon (https://github.psa-cloud.com/fnd00)
-

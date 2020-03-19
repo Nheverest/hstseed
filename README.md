@@ -1,4 +1,4 @@
-Project based on Seedstack 18.11
+Project based on Seedstack 19.11
 
 Shared on Nheverest git repository.
 
@@ -9,3 +9,5 @@ Note: no jsp engine is provided "as-is"
 - http://localhost:8081/rest/hello
 - http://localhost:8081/rest/hi/jsp
 - http://localhost:8081/rest/hi/ftl
+
+Latest 

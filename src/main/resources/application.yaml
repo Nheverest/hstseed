@@ -56,3 +56,10 @@ classes:
 
 someConfig:
   myArray: ["herve", "stern"]
+
+jms:
+  connectionFactories:
+    gnomeActiveMQConnectionFactory:
+      vendorClass: org.apache.activemq.ActiveMQConnectionFactory
+      vendorProperties:
+        brokerURL: breaksIfEmpty!
