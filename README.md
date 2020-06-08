@@ -10,4 +10,9 @@ Note: no jsp engine is provided "as-is"
 - http://localhost:8081/rest/hi/jsp
 - http://localhost:8081/rest/hi/ftl
 
-Latest 
+Latest update
+
+Added feign-compatible URL: http://localhost:8081/rest/hola
+ 
+This REST resource returns a json object to be used by feigntest project
+(Currently used in feigntest project, as part of FeignIT class.)
