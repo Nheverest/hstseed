@@ -118,11 +118,17 @@ Applications can be launched using command: mvn seedstack:watch, in parallel wit
 
 Developments on Seedstack are made on forked copies of main repository. 
 
-Fork https://github.com/seedstack/seed project, then clone your forked project.
+For example, to work on Seed project, fork https://github.com/seedstack/seed, then clone your forked project.
 
-If required, set upstream in forked project; for example:
+If required, set upstream in forked project; for example, with distribution project:
 
     git remote add upstream https://github.com/seedstack/distribution.git
+
+First steps are:
+
+1. update project version in pom.xml, if required
+
+1. update CHANGELOG.md file
 
 One can develop and test directly in seed project (prefer IT tests), and in a test project. 
 To implement current framework developments in a test project, one has two possibilities, as seen below. 
