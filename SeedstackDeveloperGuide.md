@@ -130,6 +130,8 @@ First steps are:
 
 1. update CHANGELOG.md file
 
+1. update version of component in distribution/pom.xml
+
 One can develop and test directly in seed project (prefer IT tests), and in a test project. 
 To implement current framework developments in a test project, one has two possibilities, as seen below. 
 
