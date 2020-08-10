@@ -1,15 +1,25 @@
 @startuml
 class "seedstack-bom" as seedstackbom
-note right: Defines dependencyManagement (all modules and addons)
+note right of seedstackbom
+  repo: distribution
+  Defines dependencyManagement (all modules and addons)
+end note
 class "parent-internal" as parentinternal
-note right: Defines pluginManagement
+note right of parentinternal
+  repo : poms
+  Defines pluginManagement
+end note
 class distribution
 note right of distribution
+  repo: distribution
   Defines modules and component versions
   Defines Seedstack version
 end note
 class poms
-note right: Defines plugin version and properties like inceptionYear
+note right of poms
+  repo : poms
+  Defines plugin version and properties like inceptionYear
+end note
 
 poms <|-- parentinternal : child of
 parentinternal <|-- distribution  : child of
